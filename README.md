@@ -1,35 +1,38 @@
-# MICR Reader
+# MICR Reader - Python with Flask(Web-version)
 
-## Requirements:
+## Prerequisites
+
+Make sure you have the following software installed on your system:
+
 - Python v3.11.4
 - Node.js v18.19.0
 - NPM v10.2.3
 - pytesseract v0.3.10
-- tesseract v5.3.1
+- tesseract v5.3.3
+- tesseract-lang v4.1.0
 
-## How to run:
-1. Create a virtual environment 
-    ```
-    python -m venv myenv
-    ```
+## How to Run
 
-2. Activate the virtual environment
-    - Windows
-        ```
-        myenv\Scripts\activate
-        ```
-    - macOS and Linux
-        ```
-        source myenv/bin/activate
-        ```
+### Install Dependencies
 
-3. Install Dependencies
-    ```
-    pip install package-name
-    ```
-    i.e., pip install pytesseract
+```
+pip install -r requirements.txt
+```
+For pytesseract, use the following command:
 
-4. Generate the requirements.txt file
-    ```
-    pip freeze > requirements.txt
-    ```
+```
+pip install pytesseract
+```
+
+**Make sure to set the correct path for pytesseract/tesseract directory in** `main.py` **line no. 30.**
+
+**Also, set the tessdata directory in** `main.py` **line no. 43.**
+
+### Run
+Execute the following command:
+
+```
+python main.py
+```
+
+Feel free to reach out if you encounter any issues or have questions!
