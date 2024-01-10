@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="/static/lib/w3css_4_w3.css">
+  <link rel="stylesheet" href="/static/lib/style.css">
+</head>
+<body>
+  <div class="main-wrapper">
+    <h1>MICR Reader</h1>
+
+    <a class="open-modal l but lrg w3-button w3-green w3-margin">Open Image to Crop MICR</a>
+    <div class="w3-modal cropper">
+      <div class="w3-modal-content">
+        <span class="w3-button w3-black w3-hover-red w3-display-topright w3-theme close-modal">&times;</span>
+        <h2 class="w3-black w3-center w3-padding"><strong>Image MICR Cropper</strong></h2>
+        <div class="w3-container w3-white">
+          <p>Press the button below to upload and crop an image.</p>
+          <div id="ic-main" class="ibox">
+            <div class="ic-btns clearfix">
+              <div id="ic-upload-btn" class="l but lrg file-button w3-button w3-blue">
+                <span id="ic-upload-btn-label" style="font-family: inherit;font-size: inherit;">Upload Image</span>                
+                <input id="fileInput" class="file-input" type="file" name="file" />
+              </div>
+            </div>
+            <div id="ic-cropper-wrap"></div>
+
+            <div class="ic-hidden ic-crop-btn-wrap"><br />
+              <a id="ic-crop-btn" class="l but lrg w3-button w3-grey">Crop</a>
+            </div>
+
+            <div id="ic-result-wrap" class="ic-hidden ic-result-wrap" style="margin-top: 20px;">
+              <div class="result-container" style="position: relative;width: fit-content;block-size: fit-content;padding: 0px;z-index: 1;">
+                <div class="theresult" style="position: relative;width: fit-content;block-size: block;padding: 0px;margin: 0px;"></div>
+              </div>
+            </div>
+
+            <div id="ic-download-wrap" class="ic-hidden ic-download-wrap">
+              <button id="ic-download-btn" class="l but lrg w3-button w3-grey" type="button">Process MICR Strip</button>
+              <hr />
+              Size: <span id="ic-info"></span>
+            </div>
+
+          </div>
+          <br /><br />
+        </div>
+      </div>
+    </div>
+    <div class="result-wrap">
+      Routing Number: <span class="routing-number"></span><br>
+      Account Number: <span class="account-number"></span>
+    </div>
+  </div>
+
+  <script src="/static/lib/jquery_v3.5.1.min.js"></script>
+  <script src="/static/lib/jquery_imgcropper_v1.12.4.js"></script>
+  <script src="/static/lib/script.js"></script>
+
+</body>
+</html>
